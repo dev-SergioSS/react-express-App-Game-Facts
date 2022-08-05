@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.page {
+	width: 100vw;
+	min-height: 100vh;
+	overflow-y: auto;
+	background-color: pink;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	& h1 {
+		margin-bottom: 50px;
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	width: 100%;
+
+	& input {
+		padding: 10px;
+		flex: 1 1 auto;
+		margin-bottom: 10px;
+	}
+
+	& span {
+		font-size: 14px;
+		color: red;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	& button {
+		flex: 1 1 auto;
+		padding: 10px;
+		background-color: rgb(167, 113, 218);
+		border: none;
+	}
+}
