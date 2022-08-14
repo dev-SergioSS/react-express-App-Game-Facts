@@ -11,9 +11,8 @@ const RoomSchema = new mongoose.Schema(
       type: Array,
       required: true,
     },
-    progress: {
-      type: Number,
-      default: 0,
+    stage: {
+      type: String,
     },
     pairs: {
       type: Object,

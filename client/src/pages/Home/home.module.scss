@@ -18,3 +18,21 @@
 		margin-bottom: 15px;
 	}
 }
+
+.toJoin {
+	display: flex;
+	flex-direction: column;
+
+	& span {
+		margin: 40px auto;
+	}
+
+	& input {
+		font-size: 25px;
+		padding: 5px 20px;
+		width: auto;
+		margin-bottom: 15px;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
+}

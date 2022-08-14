@@ -1,11 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './input-name.module.scss';
-import { setUserName } from '../../storage/UserSlice';
+import { setUserId, setUserName } from '../../storage/UserSlice';
+import genId from '../../lib/genId';
 
 const UserName = () => {
-  const savedName = useSelector((state) => state.user.name);
   const dispatch = useDispatch();
+  const savedId = useSelector((state) => state.user.id);
+  const savedName = useSelector((state) => state.user.name);
 
   let [name, setName] = React.useState(savedName);
   let [textErr, setTextErr] = React.useState('');
@@ -26,6 +28,11 @@ const UserName = () => {
     }
     setTextErr('');
     dispatch(setUserName(name));
+
+    if (!savedId) {
+      const userId = 'user_' + genId();
+      dispatch(setUserId(userId));
+    }
   }
 
   function showError(err) {

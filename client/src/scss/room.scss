@@ -1,0 +1,52 @@
+.room {
+	
+
+	& h1 {
+		color: rgb(171, 171, 245);
+		font-size: 40px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.users {
+	& h2 {
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	& ul {
+		display: flex;
+		margin-bottom: 40px;
+		flex-wrap: wrap;
+
+	}
+	& li {
+		padding: 5px;
+		background-color: rgb(157, 241, 61);
+		border-radius: 4px;
+		list-style: none;
+		margin: 0 10px 10px 0;
+	}
+}
+
+.btn-start {
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: rgb(79, 81, 128);
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 8px;
+	border: none;
+	transition: all 0.2s ease 0s;
+	will-change: transform;
+
+	&:active {
+		transform: scale(0.9);
+	}
+}
+
+

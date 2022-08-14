@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  gameStage: 'joining',
   id: null,
+  users: [],
 };
 
 const Room = createSlice({
@@ -11,9 +13,12 @@ const Room = createSlice({
     setRoomId: (state, action) => {
       state.id = action.payload;
     },
+    setUsers: (state, action) => {
+      state.users = action.payload;
+    },
   },
 });
 
-export const { setRoomId } = Room.actions;
+export const { setRoomId, setUsers } = Room.actions;
 
 export default Room.reducer;
